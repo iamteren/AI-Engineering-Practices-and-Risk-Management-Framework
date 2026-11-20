@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html><head><meta charset="UTF-8"><style id="qw-theme">:root {
+  --contextual-navbar-foreground-color: #000000 !important;
+  --connection-foreground-color: #FFFFFF !important;
+  --automation-foreground-color: #FFFFFF !important;
+  --global-navbar-background-color: #F3F3F7 !important;
+  --accent-foreground-color: #FFFFFF !important;
+  --primary-foreground-color: #000000 !important;
+  --measure-foreground-color: #CB7600 !important;
+  --dimension-foreground-color: #1B84BF !important;
+  --warning-background-color: #FF9800 !important;
+  --warning-foreground-color: #000000 !important;
+  --success-background-color: #27700E !important;
+  --info-foreground-color: #FFFFFF !important;
+  --secondary-foreground-color: #000000 !important;
+  --info-background-color: #2196F3 !important;
+  --measure-background-color: #FFF8EF !important;
+  --contextual-navbar-background-color: #FFFFFF !important;
+  --accent-background-color: #4200DB !important;
+  --visualization-background-color: #6842FF !important;
+  --connection-background-color: #FF4B14 !important;
+  --secondary-background-color: #F9F9FB !important;
+  --danger-background-color: #C82745 !important;
+  --automation-background-color: #D600BA !important;
+  --success-foreground-color: #FFFFFF !important;
+  --danger-foreground-color: #FFFFFF !important;
+  --dimension-background-color: #EEF8FF !important;
+  --insight-foreground-color: #FFFFFF !important;
+  --primary-background-color: #FFFFFF !important;
+  --insight-background-color: #78008A !important;
+  --visualization-foreground-color: #FFFFFF !important;
+  --global-navbar-foreground-color: #5A5A5B !important;
+  --chat-column-base: 720px !important;
+  --chat-column-max: 720px !important;
+  --color-bg: #faf9fc !important;
+  --color-navbar-bg: #f9f9fb !important;
+  --color-navbar-fg: #131920 !important;
+  --color-navbar-divider: rgba(0, 0, 0, .12) !important;
+  --color-leftnav-bg: #ffffff !important;
+  --color-bg-chat-view: #f9f9fb !important;
+  --color-bg-secondary: #ffffff !important;
+  --color-bg-tertiary: #f9fafb !important;
+  --color-bg-hover: #f3f4f6 !important;
+  --color-surface: #f9fafb !important;
+  --color-surface-hover: #f3f4f6 !important;
+  --color-surface-active: #e5e7eb !important;
+  --color-border: rgba(0, 0, 0, .12) !important;
+  --color-border-light: rgba(0, 0, 0, .06) !important;
+  --color-border-strong: #d1d5db !important;
+  --background-toggle-off-default: rgba(255, 255, 255, 0) !important;
+  --color-primary: #4200db !important;
+  --color-primary-dark: #35009e !important;
+  --color-primary-light: #8575ff !important;
+  --color-primary-bg: #e8e6ff !important;
+  --color-primary-hover-border: #35009e !important;
+  --color-nav-icon-active: #4200db !important;
+  --color-nav-hover-border: #4200db !important;
+  --color-primary-alpha-3: color-mix(in srgb, #4200db 3%, transparent) !important;
+  --color-primary-alpha-5: color-mix(in srgb, #4200db 5%, transparent) !important;
+  --color-primary-alpha-8: color-mix(in srgb, #4200db 8%, transparent) !important;
+  --color-primary-alpha-12: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-alpha-15: color-mix(in srgb, #4200db 15%, transparent) !important;
+  --color-primary-alpha-20: color-mix(in srgb, #4200db 20%, transparent) !important;
+  --color-primary-alpha-25: color-mix(in srgb, #4200db 25%, transparent) !important;
+  --color-primary-alpha-30: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-primary-alpha-40: color-mix(in srgb, #4200db 40%, transparent) !important;
+  --color-primary-alpha-50: color-mix(in srgb, #4200db 50%, transparent) !important;
+  --color-primary-alpha-60: color-mix(in srgb, #4200db 60%, transparent) !important;
+  --color-primary-subtle: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-primary-border: color-mix(in srgb, #4200db 30%, transparent) !important;
+  --color-focus-ring: #4200db !important;
+  --color-sidebar-hover: color-mix(in srgb, #4200db 12%, transparent) !important;
+  --color-sidebar-hover-solid: color-mix(in srgb, #4200db 12%, #faf9fc) !important;
+  --block-selection-outline-offset: 2px !important;
+  --color-accent: #4200db !important;
+  --color-accent-foreground: #4200db !important;
+  --color-accent-dark: #35009e !important;
+  --color-accent-light: #e8e6ff !important;
+  --color-accent-inverse: #ffffff !important;
+  --color-link: #4200db !important;
+  --color-brand-ai-gradient-start: #6842ff !important;
+  --color-brand-ai-gradient-mid: #d600ba !important;
+  --color-brand-ai-gradient-end: #ff4b14 !important;
+  --color-brand-kiro: #9147ff !important;
+  --color-primary-gradient-end: #e8e6ff !important;
+  --color-primary-bg-solid: #e8e6ff !important;
+  --color-user-bubble: #F3F3F7 !important;
+  --color-user-bubble-text: #131920 !important;
+  --color-text: #131920 !important;
+  --color-text-secondary: #5e5e5e !important;
+  --color-text-tertiary: #656871 !important;
+  --color-text-muted: #656871 !important;
+  --color-text-on-primary: #ffffff !important;
+  --color-success: #00802f !important;
+  --color-success-dark: #00471e !important;
+  --color-success-light: #d9ffd6 !important;
+  --color-success-hover: #005c26 !important;
+  --color-success-bg: #e6f5eb !important;
+  --color-success-border: #b3d9bf !important;
+  --color-success-foreground: #00802f !important;
+  --color-success-dark-foreground: #00471e !important;
+  --color-success-text: #00471e !important;
+  --color-error: #db0000 !important;
+  --color-error-dark: #700000 !important;
+  --color-error-light: #ffe0e0 !important;
+  --color-error-hover: #ffe0e0 !important;
+  --color-error-bg: #fceaea !important;
+  --color-error-border: #f2cccc !important;
+  --color-error-active-border: #db0000 !important;
+  --color-error-foreground: #db0000 !important;
+  --color-error-dark-foreground: #700000 !important;
+  --color-error-inverse: #ffffff !important;
+  --color-error-text: #700000 !important;
+  --color-warning: #f2b100 !important;
+  --color-warning-dark: #573a00 !important;
+  --color-warning-light: #fffbbd !important;
+  --color-warning-hover: #db9200 !important;
+  --color-warning-bg: #fef7e6 !important;
+  --color-warning-border: #f9dfa3 !important;
+  --color-warning-foreground: #f2b100 !important;
+  --color-warning-dark-foreground: #573a00 !important;
+  --color-warning-inverse: #573a00 !important;
+  --color-surface-warning: #fffbbd !important;
+  --color-text-warning: #573a00 !important;
+  --color-info: #006ce0 !important;
+  --color-info-dark: #002a66 !important;
+  --color-info-light: #d1f1ff !important;
+  --color-info-hover: #003b8f !important;
+  --color-info-bg: #ebf3fc !important;
+  --color-info-border: #b3d1f0 !important;
+  --color-info-foreground: #006ce0 !important;
+  --color-info-dark-foreground: #002a66 !important;
+  --color-info-inverse: #ffffff !important;
+  --color-overlay: rgba(0, 0, 0, .5) !important;
+  --color-shadow: rgba(0, 0, 0, .08) !important;
+  --color-hover: rgba(0, 0, 0, .05) !important;
+  --color-tooltip-bg: rgba(0, 0, 0, .85) !important;
+  --color-tooltip-text: #ffffff !important;
+  --color-voice-purple: #8575ff !important;
+  --color-voice-purple-dark: #4200db !important;
+  --color-voice-purple-light: #8575ff !important;
+  --color-voice-red: #db0000 !important;
+  --color-voice-red-dark: #700000 !important;
+  --color-voice-amber: #f2b100 !important;
+  --color-voice-purple-glow: rgba(66, 0, 219, .4) !important;
+  --color-voice-red-glow: rgba(219, 0, 0, .4) !important;
+  --font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  --font-mono: "SF Mono", "Monaco", "Menlo", "Consolas", monospace !important;
+  --text-2xs: .5625rem !important;
+  --text-xs: .625rem !important;
+  --text-sm: .6875rem !important;
+  --text-base: .75rem !important;
+  --text-md: .8125rem !important;
+  --text-lg: .875rem !important;
+  --text-xl: 1rem !important;
+  --text-2xl: 1.125rem !important;
+  --text-3xl: 1.25rem !important;
+  --text-4xl: 1.5rem !important;
+  --text-5xl: 2rem !important;
+  --spacing-1: calc(.25rem * 1) !important;
+  --spacing-1-5: calc(.25rem * 1.5) !important;
+  --spacing-2: calc(.25rem * 2) !important;
+  --spacing-3: calc(.25rem * 3) !important;
+  --spacing-4: calc(.25rem * 4) !important;
+  --spacing-5: calc(.25rem * 5) !important;
+  --spacing-6: calc(.25rem * 6) !important;
+  --spacing-7: calc(.25rem * 7) !important;
+  --spacing-8: calc(.25rem * 8) !important;
+  --spacing-9: calc(.25rem * 9) !important;
+  --spacing-10: calc(.25rem * 10) !important;
+  --border-radius-rounded-lg: 8px !important;
+  --radius-sm: 6px !important;
+  --radius-md: 10px !important;
+  --radius-card: 12px !important;
+  --radius-lg: 16px !important;
+  --radius-pill: 8px !important;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .05) !important;
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, .08) !important;
+  --shadow-lg: 0 4px 16px 4px rgba(0, 0, 0, .16), 0 2px 6px 1px rgba(0, 0, 0, .16) !important;
+  --color-success-bg-solid: #d9ffd6 !important;
+  --color-error-bg-solid: #ffe0e0 !important;
+  --color-error-border-solid: #ffe0e0 !important;
+  --color-warning-bg-solid: #fffbbd !important;
+  --color-warning-text: #573a00 !important;
+  --color-info-bg-solid: #d1f1ff !important;
+  --color-info-bg-solid-alt: #d1f1ff !important;
+  --color-info-text: #002a66 !important;
+  --color-info-text-alt: #002a66 !important;
+  --color-emerald: #10b981 !important;
+  --color-teal: #4ecdc4 !important;
+  --color-code-bg: #F3F3F7 !important;
+  --color-code-header-bg: #f1f3f5 !important;
+  --color-code-text: #24292e !important;
+  --color-code-border: #e1e4e8 !important;
+  --color-code-muted: #6a737d !important;
+  --color-inline-code-bg: #F3F3F7 !important;
+  --color-inline-code-text: #24292e !important;
+  --color-inline-code-border: #e1e4e8 !important;
+  --color-scrollbar-thumb: #d1d5db !important;
+  --color-scrollbar-track: transparent !important;
+  --qs-data-cat-01: #4338CA !important;
+  --qs-data-cat-02: #D97706 !important;
+  --qs-data-cat-03: #0891B2 !important;
+  --qs-data-cat-04: #8B5CF6 !important;
+  --qs-data-cat-05: #15803D !important;
+  --qs-data-cat-06: #0C4A6E !important;
+  --qs-data-cat-07: #D946EF !important;
+  --qs-data-cat-08: #65A30D !important;
+  --qs-data-cat-09: #1D4ED8 !important;
+  --qs-data-cat-10: #831843 !important;
+  --qs-data-cat-11: #C2410C !important;
+  --qs-data-cat-12: #115E59 !important;
+  --qs-data-cat-other: #737373 !important;
+  --qs-content: #fff !important;
+  --qs-main: #f9f9fb !important;
+  --qs-primary-foreground: #131920 !important;
+  --qs-secondary-foreground: #656871 !important;
+  --qs-tertiary-foreground: #656871 !important;
+  --qs-placeholder-foreground: #656871 !important;
+  --qs-divider: #dedee3 !important;
+  --qs-default-border: #8c8c94 !important;
+  --qs-neutral-soft: #b4b4bb !important;
+  --qs-neutral-gray-50: #f9fafb !important;
+  --qs-tertiary-background: #f9fafb !important;
+  --qs-action-hover: #f3f3f7 !important;
+  --qs-primary-default: #4200db !important;
+  --qs-primary-dark: #35009e !important;
+  --qs-primary-medium: #8575ff !important;
+  --qs-primary-light: #e8e6ff !important;
+  --qs-primary-inverse: #fff !important;
+  --qs-success-default: #00802f !important;
+  --qs-success-dark: #00471e !important;
+  --qs-success-light: #d9ffd6 !important;
+  --qs-error-default: #db0000 !important;
+  --qs-error-dark: #700000 !important;
+  --qs-warning-default: #f2b100 !important;
+  --qs-warning-dark: #573a00 !important;
+  --qs-warning-light: #fffbbd !important;
+  --qs-info-default: #006ce0 !important;
+  --qs-info-dark: #002a66 !important;
+  --qs-font-sans: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --safe-top: 0px !important;
+  --safe-bottom: 0px !important;
+  --safe-left: 0px !important;
+  --safe-right: 0px !important;
+  --qs-action-active: #e8e6ff !important;
+  --qs-action-active-hover: #b2a8ff !important;
+  --qs-action-disabled: #f3f3f7 !important;
+  --qs-active-border: #4200db !important;
+  --qs-application-navbar: #4200db !important;
+  --qs-application-navbar-dark: #35009e !important;
+  --qs-application-navbar-foreground: #fff !important;
+  --qs-application-navbar-light: #e8e6ff !important;
+  --qs-automation-dark: #660052 !important;
+  --qs-automation-default: #d600ba !important;
+  --qs-automation-light: #ffe0fb !important;
+  --qs-automation-medium: #b3008f !important;
+  --qs-automation-soft: #ff94f1 !important;
+  --qs-avatar-blue-bg: #d1f1ff !important;
+  --qs-avatar-blue-fg: #002a66 !important;
+  --qs-avatar-fuchsia-bg: #fce6ff !important;
+  --qs-avatar-fuchsia-fg: #590066 !important;
+  --qs-avatar-green-bg: #d9ffd6 !important;
+  --qs-avatar-green-fg: #00471e !important;
+  --qs-avatar-neutral-bg: #dedee3 !important;
+  --qs-avatar-neutral-fg: #131920 !important;
+  --qs-avatar-orange-bg: #ffe0d6 !important;
+  --qs-avatar-orange-fg: #661800 !important;
+  --qs-avatar-pink-bg: #ffe0fb !important;
+  --qs-avatar-pink-fg: #660052 !important;
+  --qs-avatar-primary-bg: #e8e6ff !important;
+  --qs-avatar-primary-fg: #35009e !important;
+  --qs-avatar-red-bg: #ffe0e0 !important;
+  --qs-avatar-red-fg: #700000 !important;
+  --qs-avatar-violet-bg: #f2e5ff !important;
+  --qs-avatar-violet-fg: #45008a !important;
+  --qs-avatar-yellow-bg: #fffbbd !important;
+  --qs-avatar-yellow-fg: #573a00 !important;
+  --qs-blue-100: #e2ebff !important;
+  --qs-blue-1000: #060d27 !important;
+  --qs-blue-200: #c2d5ff !important;
+  --qs-blue-300: #9fbdff !important;
+  --qs-blue-400: #7ea0fc !important;
+  --qs-blue-50: #fafbff !important;
+  --qs-blue-500: #517df6 !important;
+  --qs-blue-600: #2d5fe8 !important;
+  --qs-blue-700: #1d3cb9 !important;
+  --qs-blue-800: #162c85 !important;
+  --qs-blue-900: #102165 !important;
+  --qs-blue-950: #0b1746 !important;
+  --qs-brand: #fff !important;
+  --qs-brand-foreground: #131920 !important;
+  --qs-brand-navbar: #131920 !important;
+  --qs-brand-navbar-dark: #000 !important;
+  --qs-brand-navbar-foreground: #fff !important;
+  --qs-brand-navbar-light: #dedee3 !important;
+  --qs-coachmark: #006ce0 !important;
+  --qs-connection-dark: #661800 !important;
+  --qs-connection-default: #db3300 !important;
+  --qs-connection-light: #ffe0d6 !important;
+  --qs-connection-soft: #ff997a !important;
+  --qs-content-inverse: #333843 !important;
+  --qs-content-inverse-active: #131920 !important;
+  --qs-contrast-foreground: #131920 !important;
+  --qs-control-selected-bg: #4200db !important;
+  --qs-control-selected-hover-bg: #35009e !important;
+  --qs-darkpurple1-100: #eee1ef !important;
+  --qs-darkpurple1-1000: #130b14 !important;
+  --qs-darkpurple1-200: #dcc0dd !important;
+  --qs-darkpurple1-300: #c99ecc !important;
+  --qs-darkpurple1-400: #b57ab8 !important;
+  --qs-darkpurple1-50: #f8f2f8 !important;
+  --qs-darkpurple1-500: #97529b !important;
+  --qs-darkpurple1-600: #754078 !important;
+  --qs-darkpurple1-700: #542e57 !important;
+  --qs-darkpurple1-800: #472749 !important;
+  --qs-darkpurple1-900: #341c35 !important;
+  --qs-darkpurple1-950: #241325 !important;
+  --qs-darkpurple2-100: #f1e3fc !important;
+  --qs-darkpurple2-1000: #1b042f !important;
+  --qs-darkpurple2-200: #e7d0fb !important;
+  --qs-darkpurple2-300: #d6b0f8 !important;
+  --qs-darkpurple2-400: #be81f3 !important;
+  --qs-darkpurple2-50: #f8f1fe !important;
+  --qs-darkpurple2-500: #a652ef !important;
+  --qs-darkpurple2-600: #8e24eb !important;
+  --qs-darkpurple2-700: #7413c9 !important;
+  --qs-darkpurple2-800: #580e98 !important;
+  --qs-darkpurple2-900: #36095d !important;
+  --qs-darkpurple2-950: #260642 !important;
+  --qs-data-categorical-01: #4338ca !important;
+  --qs-data-categorical-02: #d97706 !important;
+  --qs-data-categorical-03: #0891b2 !important;
+  --qs-data-categorical-04: #8b5cf6 !important;
+  --qs-data-categorical-05: #15803d !important;
+  --qs-data-categorical-06: #0c4a6e !important;
+  --qs-data-categorical-07: #d946ef !important;
+  --qs-data-categorical-08: #65a30d !important;
+  --qs-data-categorical-09: #1d4ed8 !important;
+  --qs-data-categorical-10: #831843 !important;
+  --qs-data-categorical-11: #c2410c !important;
+  --qs-data-categorical-12: #115e59 !important;
+  --qs-data-categorical-other: #737373 !important;
+  --qs-data-divergent-negative: #ea580c !important;
+  --qs-data-divergent-positive: #4f46e5 !important;
+  --qs-data-divergent-red-green-negative: #dc2626 !important;
+  --qs-data-divergent-red-green-positive: #16a34a !important;
+  --qs-data-missing: #d4d4d4 !important;
+  --qs-data-sentiment-neutral: #737373 !important;
+  --qs-data-sentiment-warning: #9e6900 !important;
+  --qs-data-sequential-duochromatic-high: #1e1b4b !important;
+  --qs-data-sequential-duochromatic-low: #8b5cf6 !important;
+  --qs-data-sequential-monochromatic-high: #4f46e5 !important;
+  --qs-default-badge: #b4b4bb !important;
+  --qs-default-badge-dot: #656871 !important;
+  --qs-dimension: #4200db !important;
+  --qs-dimension-experimental: #4200db !important;
+  --qs-dimension-experimental-foreground: #4200db !important;
+  --qs-dimension-foreground: #fff !important;
+  --qs-disabled: #8c8c94 !important;
+  --qs-disabled-border: #dedee3 !important;
+  --qs-disabled-foreground: #b4b4bb !important;
+  --qs-divider-light: #f3f3f7 !important;
+  --qs-error-active-border: #db0000 !important;
+  --qs-error-border: #ffe0e0 !important;
+  --qs-error-foreground: #db0000 !important;
+  --qs-error-inverse: #fff !important;
+  --qs-error-light: #ffe0e0 !important;
+  --qs-error-medium: #900 !important;
+  --qs-error-soft: #ff9e9e !important;
+  --qs-focus-offset: 1px !important;
+  --qs-font-base-letter-spacing: .15px !important;
+  --qs-font-display: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-font-family: "Amazon Ember", "Helvetica Neue", "Segoe UI", Helvetica, Arial, sans-serif !important;
+  --qs-gradient-automation-light-stop: #ffe0fb !important;
+  --qs-gradient-automation-medium-stop: #b3008f !important;
+  --qs-gradient-automation-stop: #d600ba !important;
+  --qs-gradient-connection-light-stop: #ffe0d6 !important;
+  --qs-gradient-connection-stop: #db3300 !important;
+  --qs-gradient-insight-light-stop: #fce6ff !important;
+  --qs-gradient-insight-stop: #a000b8 !important;
+  --qs-gradient-visualization-light-stop: #f2e5ff !important;
+  --qs-gradient-visualization-stop: #7300e5 !important;
+  --qs-green-100: #ccffd8 !important;
+  --qs-green-1000: #001409 !important;
+  --qs-green-200: #a9efba !important;
+  --qs-green-300: #84d39a !important;
+  --qs-green-400: #71c68c !important;
+  --qs-green-50: #f0fff3 !important;
+  --qs-green-500: #5bbe7a !important;
+  --qs-green-600: #3c955a !important;
+  --qs-green-700: #227340 !important;
+  --qs-green-800: #00441f !important;
+  --qs-green-900: #003317 !important;
+  --qs-green-950: #002410 !important;
+  --qs-grid-gap: 16px !important;
+  --qs-grid-gap-xl: 24px !important;
+  --qs-hero-banner-button-hover: color-mix(in srgb, #fff, transparent 60%) !important;
+  --qs-hover-border: #333843 !important;
+  --qs-info-inverse: #fff !important;
+  --qs-info-light: #d1f1ff !important;
+  --qs-info-medium: #003b8f !important;
+  --qs-info-soft: #75cfff !important;
+  --qs-insight-dark: #590066 !important;
+  --qs-insight-default: #a000b8 !important;
+  --qs-insight-light: #fce6ff !important;
+  --qs-insight-soft: #f299ff !important;
+  --qs-main-foreground: #131920 !important;
+  --qs-main-secondary-foreground: #656871 !important;
+  --qs-measure: #00802f !important;
+  --qs-measure-experimental: #f2b100 !important;
+  --qs-measure-experimental-foreground: #f2b100 !important;
+  --qs-measure-foreground: #fff !important;
+  --qs-neutral-0: #fff !important;
+  --qs-neutral-100: #f5f3ef !important;
+  --qs-neutral-1000: #0b0a0a !important;
+  --qs-neutral-200: #ece9e4 !important;
+  --qs-neutral-300: #e2dfda !important;
+  --qs-neutral-400: #cdc9c1 !important;
+  --qs-neutral-50: #faf9f7 !important;
+  --qs-neutral-500: #adaaa3 !important;
+  --qs-neutral-600: #94918b !important;
+  --qs-neutral-700: #7d7a73 !important;
+  --qs-neutral-800: #5e5b56 !important;
+  --qs-neutral-900: #302f2c !important;
+  --qs-neutral-950: #151310 !important;
+  --qs-neutral-black: #000 !important;
+  --qs-neutral-dark: #333843 !important;
+  --qs-neutral-deep: #656871 !important;
+  --qs-neutral-default: #dedee3 !important;
+  --qs-neutral-light: #f3f3f7 !important;
+  --qs-neutral-lightest: #f9f9fb !important;
+  --qs-neutral-medium: #8c8c94 !important;
+  --qs-neutral-strong: #131920 !important;
+  --qs-neutral-white: #fff !important;
+  --qs-overlay: color-mix(in srgb, #131920, transparent 50%) !important;
+  --qs-popover-border: transparent !important;
+  --qs-primary-inverse-foreground: #fff !important;
+  --qs-primary-soft: #b2a8ff !important;
+  --qs-progress-active: #4200db !important;
+  --qs-red-100: #ffe4e1 !important;
+  --qs-red-1000: #240004 !important;
+  --qs-red-200: #ffc7c2 !important;
+  --qs-red-300: #ffa099 !important;
+  --qs-red-400: #eb6560 !important;
+  --qs-red-50: #fff6f5 !important;
+  --qs-red-500: #c33c38 !important;
+  --qs-red-600: #aa2b2b !important;
+  --qs-red-700: #8a0f0f !important;
+  --qs-red-800: #6e000d !important;
+  --qs-red-900: #57000a !important;
+  --qs-red-950: #3d0007 !important;
+  --qs-secondary: #dedee3 !important;
+  --qs-secondary-dark: #b4b4bb !important;
+  --qs-secondary-light: #f3f3f7 !important;
+  --qs-shadow: #00000029 !important;
+  --qs-shadow-lg: 0 4px 16px 4px #00000029, 0 2px 6px 1px #00000029 !important;
+  --qs-shadow-md: 0 0 2px 0 #00000029, 0 2px 8px 1px #00000029 !important;
+  --qs-shadow-pin-left: inset -4px 0 4px -4px #00000029 !important;
+  --qs-shadow-pin-right: inset 4px 0 4px -4px #00000029 !important;
+  --qs-shadow-sm: 0 0 2px 0 #00000029, 0 0 4px 0 #00000029 !important;
+  --qs-shadow-xl: 0 4px 8px 2px #00000029, 0 6px 20px 4px #00000029 !important;
+  --qs-spice: #ff9800 !important;
+  --qs-success-inverse: #fff !important;
+  --qs-success-medium: #005c26 !important;
+  --qs-success-soft: #aeffa8 !important;
+  --qs-tag-default: #dedee3 !important;
+  --qs-tag-soft-border: #b4b4bb !important;
+  --qs-toggle-tile-lg: calc(.25rem * 15) !important;
+  --qs-toggle-tile-md: calc(.25rem * 12) !important;
+  --qs-toggle-tile-sm: calc(.25rem * 8) !important;
+  --qs-transparent: transparent !important;
+  --qs-visualization-dark: #45008a !important;
+  --qs-visualization-default: #7300e5 !important;
+  --qs-visualization-light: #f2e5ff !important;
+  --qs-visualization-soft: #d4a8ff !important;
+  --qs-warning-experimental: #f2b100 !important;
+  --qs-warning-experimental-light: #fffbbd !important;
+  --qs-warning-experimental-light-foreground: #fffbbd !important;
+  --qs-warning-inverse: #573a00 !important;
+  --qs-warning-medium: #db9200 !important;
+  --qs-warning-soft: #ffed4d !important;
+  --qs-width-modal-lg: 1136px !important;
+  --qs-width-modal-md: 600px !important;
+  --qs-width-modal-sm: 384px !important;
+  --qs-yellow-100: #fff5cf !important;
+  --qs-yellow-1000: #1f1100 !important;
+  --qs-yellow-200: #ffe79e !important;
+  --qs-yellow-300: #fbd86f !important;
+  --qs-yellow-400: #facb3d !important;
+  --qs-yellow-50: #fffcf0 !important;
+  --qs-yellow-500: #e2ac36 !important;
+  --qs-yellow-600: #ca8d2b !important;
+  --qs-yellow-700: #9d672f !important;
+  --qs-yellow-800: #7a4c19 !important;
+  --qs-yellow-900: #522e00 !important;
+  --qs-yellow-950: #381f00 !important;
+  --qs-duration-reorder: .125s !important;
+  --qs-ease-reorder: ease-in-out !important;
+  --z-subtask-modal: 10000 !important;
+  --z-above-subtask-modal: 10001 !important;
+  --react-pdf-text-layer: 1 !important;
+  --highlight-bg-color: rgba(180, 0, 170, 1) !important;
+  --highlight-selected-bg-color: rgba(0, 100, 0, 1) !important;
+  --react-pdf-annotation-layer: 1 !important;
+  --annotation-unfocused-field-background: url("data:image/svg+xml;charset=UTF-8,<svg width='1px' height='1px' xmlns='http://www.w3.org/2000/svg'><rect width='100%' height='100%' style='fill:rgba(0, 54, 255, 0.13);'/></svg>") !important;
+  --input-focus-border-color: Highlight !important;
+  --input-focus-outline: 1px solid Canvas !important;
+  --input-unfocused-border-color: transparent !important;
+  --input-disabled-border-color: transparent !important;
+  --input-hover-border-color: black !important;
+  --link-outline: none !important;
+}</style><title>SEI practice decision nodes</title>
+<style nonce="01BwGv4o2GCnBdLzuHZPQg==">
+body{background:var(--color-bg);color:var(--color-text);font-family:var(--font-sans);margin:0;padding:20px 24px 60px;line-height:1.5}
+h1{font-size:22px;margin:0 0 4px}.sub{color:var(--color-text-secondary);font-size:13px;margin:0 0 14px;max-width:820px}
+.bar{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 10px}
+.bar button{border:1px solid var(--color-border);background:var(--color-bg-secondary);color:var(--color-text);border-radius:var(--radius-pill);padding:3px 11px;font-size:13px;cursor:pointer;font-family:inherit}
+.bar button[aria-pressed=true]{background:var(--color-text);color:var(--color-bg-secondary);border-color:var(--color-text)}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12px;color:var(--color-text-secondary);margin:0 0 18px}
+.legend span{display:inline-flex;align-items:center;gap:6px}.sw{width:12px;height:12px;border-radius:3px;display:inline-block}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:28px}
+@media(max-width:860px){.wrap{grid-template-columns:1fr}}
+section.p{border-top:1px solid var(--color-border);padding:16px 0 8px}
+.pid{font-size:12px;color:var(--color-text-secondary)}h2{font-size:17px;margin:2px 0 6px;font-weight:600}
+.root{font-size:14px;margin:0 0 10px}.root b{font-weight:600}
+.txt{font-family:Georgia,'Times New Roman',serif;font-size:15.5px;line-height:1.75;max-width:760px}
+.pill{border-radius:4px;padding:1px 3px;cursor:pointer;border-bottom:2px solid;transition:background .15s}
+.pill sup{font-family:var(--font-sans);font-size:10px;font-weight:700;margin-left:2px}
+.t-Q{background:rgba(59,130,246,.13);border-color:#2563eb}.t-B{background:rgba(245,158,11,.16);border-color:#b45309}
+.t-C{background:rgba(34,197,94,.14);border-color:#15803d}.t-T{background:rgba(147,51,234,.12);border-color:#7e22ce}
+.t-R{background:rgba(100,116,139,.15);border-color:#475569}
+.pill.on{outline:2px solid var(--color-text)}.dim .pill{background:none;border-color:transparent;cursor:default}.dim .pill.keep{background:inherit}
+.src{font-size:12px;color:var(--color-text-secondary);margin:6px 0 0}
+ol.tree{font-size:13px;padding-left:20px;margin:10px 0 0;max-width:760px}ol.tree li{margin:3px 0;cursor:pointer}ol.tree li:hover{text-decoration:underline}
+.tg{font-size:11px;font-weight:700;border-radius:3px;padding:0 5px;margin-right:6px}
+aside{position:sticky;top:12px;align-self:start;font-size:13px}
+#tip{position:fixed;z-index:9;max-width:340px;background:var(--color-bg-secondary);border:1px solid var(--color-border);border-radius:var(--radius-sm);box-shadow:var(--shadow-md);padding:10px 12px;font-size:13px;pointer-events:none;display:none}
+#tip .k{font-size:11px;font-weight:700;margin-bottom:3px}#tip .q{font-weight:600;margin-bottom:6px}#tip .s{color:var(--color-text-secondary)}#tip .s b{color:var(--color-text)}
+.card{border:1px solid var(--color-border);background:var(--color-bg-secondary);border-radius:var(--radius-sm);padding:12px}
+.card h3{font-size:13px;margin:0 0 6px}.card .q{font-weight:600;margin:4px 0 8px}.muted{color:var(--color-text-secondary)}
+
+.vt{display:flex;gap:6px;margin:10px 0 0}.vt button{border:1px solid var(--color-border);background:var(--color-bg-secondary);color:var(--color-text);border-radius:var(--radius-sm);padding:2px 10px;font-size:12px;cursor:pointer;font-family:inherit}
+.vt button[aria-pressed=true]{background:var(--color-text);color:var(--color-bg-secondary)}
+.dg{margin:10px 0 0;max-width:760px;overflow-x:auto}
+.rootn{display:inline-block;background:var(--color-text);color:var(--color-bg-secondary);border-radius:var(--radius-sm);padding:7px 11px;font-size:13px;font-weight:600;max-width:520px}
+.spine{border-left:2px solid var(--color-border-strong);margin-left:16px;padding:4px 0 0 0}
+.step{position:relative;padding:8px 0 4px 22px}
+.step:before{content:"";position:absolute;left:0;top:22px;width:18px;border-top:2px solid var(--color-border-strong)}
+.nd{display:inline-block;border:1px solid;border-left-width:4px;border-radius:var(--radius-sm);padding:5px 9px;font-size:12.5px;max-width:440px;cursor:pointer;background:var(--color-bg-secondary);color:var(--color-text);text-align:left;font-family:inherit;line-height:1.4}
+.nd .n{font-weight:700;margin-right:5px}
+.nd:hover{box-shadow:var(--shadow-sm)}
+.kids{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 0 18px;padding:6px 0 0 12px;border-left:2px dotted var(--color-border-strong)}
+.kids .nd{max-width:300px;font-size:12px}
+.loop{font-size:11.5px;color:#7e22ce;margin:4px 0 0 0}
+.b-Q{border-color:#2563eb}.b-B{border-color:#b45309}.b-C{border-color:#15803d}.b-T{border-color:#7e22ce}.b-R{border-color:#475569}
+.dkey{font-size:11.5px;color:var(--color-text-secondary);margin:6px 0 0}
+
+.map{display:grid;grid-template-columns:minmax(0,520px) minmax(0,1fr);gap:20px;align-items:start;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border);padding:14px 0;margin:0 0 6px}
+@media(max-width:760px){.map{grid-template-columns:1fr}}
+.map h2{font-size:16px;margin:0 0 6px}.map svg{width:100%;height:auto;display:block}
+.map .pn{cursor:pointer}.map .pn text{font-size:12px;font-weight:700;fill:var(--color-text);pointer-events:none}
+.map .pn circle{fill:var(--color-bg-secondary);stroke:var(--color-text);stroke-width:1.5}
+.map .pn.on circle{fill:var(--color-text)}.map .pn.on text{fill:var(--color-bg-secondary)}
+.map path{fill:none;transition:opacity .15s}.map .fade{opacity:.08}
+.lk{display:inline-flex;align-items:center;gap:4px;border:1px solid var(--color-border);border-radius:var(--radius-pill);padding:0 7px;font-size:11px;margin:4px 4px 0 0;cursor:pointer;background:var(--color-bg-secondary);color:var(--color-text);font-family:inherit}
+.lk i{width:14px;height:0;border-top:2px solid #1a1a1a;display:inline-block}.lk.tie i{border-top-style:dashed}.lk.theme i{border-top-style:dotted;border-color:#6b7280}
+#mapinfo{font-size:13px}#mapinfo ul{padding-left:18px;margin:6px 0}
+</style></head><body>
+<h1>Decision nodes in the 12 SEI practices</h1>
+<p class="sub">Each practice read as a loose decision tree. Highlighted phrases are verbatim spans of the full practice text. Hover one to see the decision it implies and how it could tie into AI Engineer Studio. Click it to pin. Mappings are draft proposals for review, not part of the source.</p>
+<div class="bar" id="pnav"></div>
+<div class="bar" id="tnav"></div>
+<div class="legend" id="leg"></div>
+<div class="map"><div><svg id="msvg" viewBox="-320 -218 640 436" role="img" aria-label="Links between the 12 practices"></svg></div>
+<div id="mapinfo"><h2>The 12 practices form one connected tree, not 12 separate ones</h2>
+<p class="muted" style="margin: 0px 0px 8px;">Only two links are stated in the SEI text itself: P4 to P9 and P11 to P5. The rest come from the studio tie-ins or from themes the texts share, and are proposals for review. Hover or click a practice to see its links.</p>
+<div class="legend" style="margin: 0px;"><span><i class="sw" style="border-top: 2.5px solid var(--color-text); height: 0px; width: 22px; border-radius: 0px;"></i>Stated in SEI text</span><span><i class="sw" style="border-top: 2px dashed var(--color-text); height: 0px; width: 22px; border-radius: 0px;"></i>From studio tie-in</span><span><i class="sw" style="border-top: 2px dotted rgb(107, 114, 128); height: 0px; width: 22px; border-radius: 0px;"></i>Shared theme</span></div>
+<div id="mapsel"></div></div></div>
+<div class="wrap"><main id="main"></main>
+<aside><div class="card" id="pin"><h3>Pinned node</h3><div class="muted">Click a highlighted phrase or a tree step to pin it here while you read.</div></div>
+<p class="muted" style="margin-top: 12px;">Studio references come from AI_Engineer_Studio_Project.md and AI_Engineer_Studio_Stage_Gates.md: stage gates 1 to 6, GOVERN, node types (Hazard, Autonomy Boundary, Artifact Registry, Cost Monitor, Uncertainty Handler), the 4 studio agents and the review packet.</p></aside></div>
+<div id="tip"></div>
+<script>
+const D=[{"id": "P1", "label": "Problem fit", "title": "Ensure you have a problem that should be solved by AI, and select the right approach for the problem and context.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 3", "text": "AI is not appropriate for every problem. Problems that require fully specified behavior, demand complete auditability of decisions, or have a low tolerance for error may be better addressed through conventional software or simpler analytical methods. For example, validating a shipping address against a postal database is a poor fit for a probabilistic model, while classifying novel images across thousands of categories is a poor fit for hand-coded rules. The NIST AI RMF “Map” function provides a structured approach for scoping whether and how AI fits a given use case. This assessment remains the first and most important engineering decision and should be revisited as requirements, capabilities, and operational context evolve. Equally critical is selecting the right approach. The range of options described above, from bespoke training to compound systems, carry substantially different implications for cost, data requirements, control, security, and maintainability. Evaluate the total cost of ownership, including inference, evaluation, monitoring, and ongoing oversight, not just the cost to build the prototype. Similarly, the problem and context dictate other needs: a predictive-maintenance system may require data unique to certain machinery wear patterns, an on-premises medical imaging diagnostic system may need to run inside a secure network with documented change-control procedures, and the size, weight, and power constraints of a drone platform may necessitate the use of a small-scale computer vision model rather than a large one that resides at the top of benchmark leaderboards.", "root": "Is AI the right solution here, and which approach fits?", "nodes": [{"ph": "AI is not appropriate for every problem", "t": "Q", "q": "Should this be solved with AI at all?", "s": "Stage 1 entry gate. The scoping-interview agent opens with this question before any architecture is drawn.", "links": []}, {"ph": "require fully specified behavior, demand complete auditability of decisions, or have a low tolerance for error", "t": "C", "q": "Do any of these three hold? If yes, lean toward conventional software or simpler analytics.", "s": "Three checkboxes on the Problem Brief node. Any one checked makes the studio offer rules or conventional node templates first.", "links": []}, {"ph": "scoping whether and how AI fits a given use case", "t": "Q", "q": "What is the use case, and what existing workflow or solution does it replace?", "s": "Discovery output: Problem brief and success metrics, the first item in the review packet.", "links": []}, {"ph": "should be revisited as requirements, capabilities, and operational context evolve", "t": "T", "q": "When should this decision be reopened?", "s": "The Stage 1 gate reopens when Stage 6 flags drift, a capability shift or new requirements, using the existing feedback loop.", "links": []}, {"ph": "from bespoke training to compound systems", "t": "B", "q": "Which approach in the range: bespoke training, fine-tuning, API foundation model, compound system?", "s": "The candidate-architectures agent proposes 2 to 3 options from this range (expanded in P4).", "links": [{"to": "P4", "k": "tie"}]}, {"ph": "cost, data requirements, control, security, and maintainability", "t": "C", "q": "How does each option compare on these five implications?", "s": "Columns in the 'comparison of approaches' Stage 1 exit artifact.", "links": []}, {"ph": "total cost of ownership, including inference, evaluation, monitoring, and ongoing oversight", "t": "C", "q": "What is the full TCO, not just the prototype cost?", "s": "Seed a Cost Monitor node (P10) at Stage 1 with a TCO estimate per candidate.", "links": [{"to": "P10", "k": "tie"}]}, {"ph": "the problem and context dictate other needs", "t": "Q", "q": "What context constraints apply: unique data, a secure on-prem network, size, weight and power limits?", "s": "Constraint fields on the Problem Brief that filter which node templates are offered.", "links": []}]}, {"id": "P2", "label": "Teams", "title": "Build cross-functional teams with the domain expertise, engineering depth, and organizational support to develop and operate AI systems.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 3", "text": "Effective AI Engineering depends on integration across disciplines. Teams need expertise in AI system behavior, in managing the data that shapes system performance, and in evaluating whether system outputs are correct and appropriate in context. Treating AI as a plug-in component that a separate team develops and hands off rarely succeeds. Required capabilities have grown as the field has matured: teams now need expertise that spans system engineering, platform engineering, evaluation design, and prompt engineering alongside traditional software and data skills. What matters is not that every capability is represented by a dedicated role, but that the people building, evaluating, and operating AI systems bring sufficient breadth to reason about the full system lifecycle. Domain expertise deserves particular emphasis. Domain experts are essential for defining what correct means in context, identifying failure modes that purely technical evaluation overlooks, and judging whether a system is safe to operate. A data cascade is a compounding negative effect that occurs when data issues in early stages propagate through the system lifecycle. In high-stakes AI systems, 43% of data cascades have been traced to inadequate domain expertise. As AI systems take on higher-stakes tasks, the cost of operating without adequate domain knowledge increases. Organizations should also invest in AI literacy across the teams that interact with, manage, or depend on AI systems, because teams that understand the capabilities and limitations make better decisions about their use. Finally, organizations should have not only AI literacy, but also the ability to connect AI capabilities to specific workflows and the organizational support to change existing workflows if AI adds value.", "root": "Does the team have the breadth, domain depth and organizational backing?", "nodes": [{"ph": "expertise in AI system behavior, in managing the data that shapes system performance, and in evaluating whether system outputs are correct and appropriate in context", "t": "C", "q": "Are all three areas covered: AI behavior, data, evaluation?", "s": "GOVERN team panel: each gate lists the capabilities it needs and who covers them.", "links": []}, {"ph": "Treating AI as a plug-in component that a separate team develops and hands off rarely succeeds", "t": "B", "q": "An integrated team or a handoff? A handoff is a warning sign.", "s": "Ownership field on every stage gate (P10 reconfirms ownership at each gate).", "links": [{"to": "P10", "k": "tie"}]}, {"ph": "sufficient breadth to reason about the full system lifecycle", "t": "R", "q": "Judge breadth across the lifecycle, not headcount per role.", "s": "A capability matrix rather than an org chart in the review packet.", "links": []}, {"ph": "Domain experts are essential for defining what correct means in context", "t": "Q", "q": "Who defines what 'correct' means, and who judges whether it is safe to operate?", "s": "Domain-expert sign-off on the Stage 1 eval criteria and the Stage 4 eval report.", "links": []}, {"ph": "invest in AI literacy", "t": "Q", "q": "Do the people who use or depend on the system understand its limits?", "s": "An open-questions item in the review packet.", "links": []}, {"ph": "organizational support to change existing workflows if AI adds value", "t": "Q", "q": "Can the workflow actually change if AI adds value? Who owns that change?", "s": "A 'workflow change owner' field on the Problem Brief. If it's blank, Stage 1 is flagged.", "links": []}]}, {"id": "P3", "label": "Data", "title": "Take your data seriously across the full system lifecycle.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 3", "text": "The data that shapes AI system behavior extends well beyond training sets to include retrieval information, fine-tuning datasets, evaluation benchmarks, and context provided at inference time. Regardless of how data is used, the quality, relevance, and representativeness of this data have a direct impact on system performance, and data work remains one of the most underestimated aspects of AI Engineering. Research in data-centric AI reinforces that systematically improving data is often more effective than improving models. Several data challenges deserve specific attention. Data provenance is an engineering concern that applies across all AI approaches. Provenance includes where data comes from, how it is licensed, and whether it is representative of the deployment context. Drift is a persistent source of degraded performance that requires different detection and mitigation strategies depending on the nature of the change. Changes include drift in the input distributions (data drift), the relationship between inputs and outputs (concept drift), or the broader environmental conditions. For foundation model applications, the relevant data concerns include retrieval quality, prompt design, and in-context examples, not only training datasets. The use of synthetic data is becoming more common but introduces new quality and representativeness concerns that practitioners have not yet fully addressed. Finally, evaluation data curation and benchmark design demand engineering rigor. Applying systematic, reproducible engineering practices to data curation and benchmark construction is essential for reliability and ensuring evaluations reflect downstream real-world performance.", "root": "Which data shapes behavior, and is it fit across the lifecycle?", "nodes": [{"ph": "extends well beyond training sets to include retrieval information, fine-tuning datasets, evaluation benchmarks, and context provided at inference time", "t": "B", "q": "Which data types does this system use?", "s": "Stage 2 data inventory: every data node is typed as training, retrieval, fine-tune, eval or inference context.", "links": []}, {"ph": "where data comes from, how it is licensed, and whether it is representative of the deployment context", "t": "C", "q": "Provenance: source, license, representativeness?", "s": "Required fields on each Data Source node. Also feeds the P5 poisoning check.", "links": [{"to": "P5", "k": "tie"}]}, {"ph": "drift in the input distributions (data drift), the relationship between inputs and outputs (concept drift), or the broader environmental conditions", "t": "B", "q": "What kind of drift is likely? Each kind needs its own detection.", "s": "A drift-type selector on the Stage 6 drift monitor, which loops back to Stage 2.", "links": []}, {"ph": "retrieval quality, prompt design, and in-context examples", "t": "B", "q": "If this is a foundation-model app, are retrieval, prompts and examples treated as data?", "s": "RAG and prompt nodes are versioned like datasets (P6).", "links": [{"to": "P6", "k": "tie"}]}, {"ph": "The use of synthetic data is becoming more common", "t": "Q", "q": "Is synthetic data used? If so, what are the quality and representativeness risks?", "s": "A synthetic-data flag on data nodes that adds a risk note to the packet.", "links": []}, {"ph": "evaluation data curation and benchmark design demand engineering rigor", "t": "R", "q": "Are eval datasets curated reproducibly?", "s": "A versioned eval dataset as a Stage 2 exit artifact.", "links": [{"to": "P12", "k": "theme"}]}]}, {"id": "P4", "label": "Approach", "title": "Select AI approaches based on the requirements of the problem, not the appeal of the technology.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 3–4", "text": "AI approaches are often selected because they generate attention and excitement but are poorly matched to the problem trying to be solved. Selecting the right AI approach means choosing among rules engines, classical ML models, specialized models, foundation models consumed via API, fine-tuned open-weight models, compound AI systems that combine several of these, and agentic systems that plan and execute multi-step tasks autonomously. Each option differs across dimensions that matter in practice: cost, latency, interpretability, controllability, data requirements, and operational complexity. The simplest approach that meets performance and governance requirements is often the best one. Establish interpretability requirements early because some approaches are more explainable than others, and retrofitting interpretability is often impractical. Compound and agentic systems, which orchestrate multiple AI and non-AI components, are increasingly common. These architectures can offer better cost-performance tradeoffs over relying on a single model, but they add engineering complexity in orchestration, testing, failure handling, and oversight. The more autonomy a system has, the more important it becomes to design for observability and human review at critical decision points. Plan for the likelihood that the best available approach will change. Foundation model capabilities shift at least quarterly, and designing for substitutability (see Practice 9) is an architectural response to this reality.", "root": "Which approach meets the requirements, not the hype?", "nodes": [{"ph": "rules engines, classical ML models, specialized models, foundation models consumed via API, fine-tuned open-weight models, compound AI systems that combine several of these, and agentic systems", "t": "B", "q": "Where on this seven-step ladder does the problem sit?", "s": "Node template palette groups, and the option set for the candidate-architectures agent.", "links": []}, {"ph": "cost, latency, interpretability, controllability, data requirements, and operational complexity", "t": "C", "q": "How does each candidate score on these six dimensions?", "s": "Scoring columns in the comparison of approaches.", "links": []}, {"ph": "The simplest approach that meets performance and governance requirements", "t": "R", "q": "Pick the simplest candidate that passes.", "s": "The critique agent flags a design when a simpler candidate also passed.", "links": []}, {"ph": "Establish interpretability requirements early", "t": "Q", "q": "What interpretability is required, decided now?", "s": "A required Stage 1 field. Rules out opaque options before Stage 3.", "links": []}, {"ph": "they add engineering complexity in orchestration, testing, failure handling, and oversight", "t": "C", "q": "If compound or agentic, is there capacity for that added complexity?", "s": "Choosing a compound or agentic template auto-adds eval, oversight and failure-handling nodes.", "links": []}, {"ph": "The more autonomy a system has, the more important it becomes to design for observability and human review", "t": "R", "q": "More autonomy means more observability and review points.", "s": "An Autonomy Boundary node is required for agentic designs (P7).", "links": [{"to": "P7", "k": "tie"}]}, {"ph": "Plan for the likelihood that the best available approach will change", "t": "T", "q": "When will the approach be re-evaluated? Capabilities shift quarterly.", "s": "A model router node isolates selection (P9). Scheduled re-check.", "links": [{"to": "P9", "k": "text"}]}]}, {"id": "P5", "label": "Security", "title": "Secure AI systems across the full threat surface, from training-time attacks to runtime exploitation.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 4", "text": "AI systems expand the attack surface beyond traditional software, requiring dedicated security attention. Classical threats like training data poisoning, adversarial inputs, and model theft remain relevant, but the threat landscape has grown considerably. Systems that consume third-party models or components face supply chain risks, including compromised model weights, poisoned open source packages, and unverified artifacts. The Coalition for Secure AI recommends a defense-in-depth strategy that includes data provenance tracking, model signing, and AI-specific security assessments. Know the provenance of every AI component in a system, and have a plan for responding when a component is found to be compromised. Systems built on foundation models introduce additional attack categories. The Open Worldwide Application Security Project (OWASP) GenAI Security Project identified prompt injection, system prompt leakage, excessive agency, and vector and embedding weaknesses as leading risks. Agentic systems amplify these concerns by granting AI components operational authority (the ability to execute actions). Red teaming has emerged as a practice for identifying these risks, although it still has limitations. Adopt red teaming as one component of a broader security program that incorporates threat modeling, designed-in security, continuous monitoring, and incident response.", "root": "What is the attack surface, and which defenses cover it?", "nodes": [{"ph": "training data poisoning, adversarial inputs, and model theft", "t": "B", "q": "Which classical threats apply?", "s": "Threat model checklist at Stages 2 and 3.", "links": []}, {"ph": "compromised model weights, poisoned open source packages, and unverified artifacts", "t": "B", "q": "Supply chain: which third-party components are used, and are they verified?", "s": "Artifact Registry node (P6) records signing and verification status for each component.", "links": [{"to": "P6", "k": "tie"}]}, {"ph": "data provenance tracking, model signing, and AI-specific security assessments", "t": "C", "q": "Are these defense-in-depth controls in place?", "s": "Control checklist attached to the threat model.", "links": []}, {"ph": "have a plan for responding when a component is found to be compromised", "t": "Q", "q": "What happens when a component is compromised?", "s": "Stage 6 incident response plan.", "links": []}, {"ph": "prompt injection, system prompt leakage, excessive agency, and vector and embedding weaknesses", "t": "B", "q": "If built on a foundation model, which of these OWASP risks apply?", "s": "OWASP checks attach automatically to LLM, prompt and vector-store nodes at Stage 3.", "links": []}, {"ph": "granting AI components operational authority", "t": "Q", "q": "Does the AI execute actions? If so, risk is amplified.", "s": "Ties to the Autonomy Boundary node: excessive agency is checked against it.", "links": [{"to": "P7", "k": "theme"}]}, {"ph": "threat modeling, designed-in security, continuous monitoring, and incident response", "t": "C", "q": "Is red teaming one part of a fuller program?", "s": "Stage 4 red-team findings, plus links to the threat model and Stage 6 monitoring.", "links": []}]}, {"id": "P6", "label": "Traceability", "title": "Implement traceability and version control across all AI system artifacts to enable recovery, debugging, and accountability.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 4", "text": "AI systems are sensitive to changes in their dependencies, and the set of artifacts to track has grown beyond models and training data. Depending on the approach, tracked artifacts may include evaluation datasets, prompts, retrieval configurations, guardrail settings, fine-tuning data, tool definitions, and specific versions of third-party models or APIs. When a foundation model is updated, behavior can change without any modification to system code. Systematic versioning and experiment tracking across these artifacts are baseline engineering practices, not optional infrastructure. Traceability is necessary for debugging, maintainability, and accountability. When a compound AI system produces an unexpected result, understanding which component caused the regression requires the ability to trace through the full system architecture. For agentic systems, traceability is even more important to reconstruct what context the system had, what decisions it made, what tools it invoked, and with what permissions. More broadly, documenting why a system was configured in a specific way, what data informed those decisions, and what tradeoffs were made makes debugging faster, onboarding easier, and audits traceable. Design AI systems for auditability from the start rather than retrofitting after deployment.", "root": "What must be versioned and traceable to debug and account for behavior?", "nodes": [{"ph": "evaluation datasets, prompts, retrieval configurations, guardrail settings, fine-tuning data, tool definitions, and specific versions of third-party models or APIs", "t": "B", "q": "Which of these artifacts exist in this design?", "s": "The Artifact Registry fills itself from the graph: each node declares its artifacts.", "links": [{"to": "P12", "k": "theme"}]}, {"ph": "When a foundation model is updated, behavior can change without any modification to system code", "t": "T", "q": "Are third-party model versions pinned, and is someone alerted on change?", "s": "A version pin on model nodes, with a change alert in Stage 6.", "links": []}, {"ph": "which component caused the regression", "t": "Q", "q": "Can a regression be traced to one component?", "s": "A trace view across graph edges.", "links": []}, {"ph": "what context the system had, what decisions it made, what tools it invoked, and with what permissions", "t": "C", "q": "For agents: can context, decisions, tools and permissions be reconstructed?", "s": "Trace requirements on Agent and Tool nodes.", "links": []}, {"ph": "documenting why a system was configured in a specific way, what data informed those decisions, and what tradeoffs were made", "t": "R", "q": "Are the reasons behind each choice recorded?", "s": "Every gate decision is logged (GOVERN) and exported in the review packet.", "links": []}, {"ph": "Design AI systems for auditability from the start", "t": "R", "q": "Is auditability designed in, not retrofitted?", "s": "A Stage 1 check rather than a Stage 5 one.", "links": []}]}, {"id": "P7", "label": "Human oversight", "title": "Design human-AI interaction and oversight appropriate to the system’s risk level and operating context.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 4–5", "text": "Users remain the primary feedback mechanism for AI systems, and the design of human-AI interaction is a critical engineering concern. The right oversight pattern depends on the stakes, the operational tempo, and the nature of the AI system. Some applications warrant human review of every output; others require monitoring at a statistical level; and some operate autonomously with only periodic review. Effective oversight balances operational efficiency with appropriate control. Systems that need to respond in milliseconds require monitoring rather than approval gates, while high-stakes systems benefit from structured review at critical decision points. Where human oversight alone is insufficient (due to speed, scale, or complacency) it should be complemented by technical safeguards like automated constraint enforcement, output filtering, and anomaly-triggered circuit breakers. The effectiveness of oversight mechanisms should be measured, not assumed. Tracking metrics like override rates and time-on-task can reveal when human review has become insufficient. A well-documented challenge is automation complacency: human overseers tend to accept AI recommendations without sufficient scrutiny, particularly as system performance improves and trust builds over time. Recent work identifies a deeper pattern—cognitive surrender—where users both defer to AI and relinquish their own reasoning process. Placing a human in the loop does not guarantee effective oversight. Interaction design must actively support engagement, giving overseers the context and tools to evaluate outputs critically rather than accept them reflexively. For agentic systems, the design challenge requires defining explicit boundaries around what the system can do independently, what requires human approval, and what is prohibited, along with structured escalation mechanisms for when the system encounters situations outside its defined scope and authority.", "root": "What oversight pattern fits the stakes and tempo?", "nodes": [{"ph": "The right oversight pattern depends on the stakes, the operational tempo, and the nature of the AI system", "t": "C", "q": "Inputs: how high are the stakes, how fast must it respond, what kind of system is it?", "s": "Three inputs on the Stage 5 oversight design that drive the next branch.", "links": []}, {"ph": "Some applications warrant human review of every output; others require monitoring at a statistical level; and some operate autonomously with only periodic review", "t": "B", "q": "Review every output, monitor statistically, or run autonomously with periodic review?", "s": "An oversight-pattern selector on the Stage 5 exit artifact.", "links": []}, {"ph": "Systems that need to respond in milliseconds require monitoring rather than approval gates", "t": "R", "q": "Millisecond tempo means monitoring, not approval gates.", "s": "The studio warns when an approval gate is placed on a real-time path.", "links": []}, {"ph": "automated constraint enforcement, output filtering, and anomaly-triggered circuit breakers", "t": "B", "q": "Where humans aren't enough, which technical safeguards are added?", "s": "Guardrail, filter and circuit-breaker node templates.", "links": []}, {"ph": "Tracking metrics like override rates and time-on-task", "t": "C", "q": "How is oversight effectiveness measured?", "s": "Override rate and time-on-task panels in the Stage 6 monitoring spec.", "links": []}, {"ph": "automation complacency", "t": "Q", "q": "How is complacency or cognitive surrender detected and designed against?", "s": "A critique-agent check on the review UI design.", "links": []}, {"ph": "what the system can do independently, what requires human approval, and what is prohibited", "t": "B", "q": "For agents: which actions are autonomous, approval-required or prohibited?", "s": "The Autonomy Boundary node: a three-column table per tool or action.", "links": []}, {"ph": "structured escalation mechanisms", "t": "Q", "q": "What is the escalation path when the system goes out of scope?", "s": "An escalation edge from Agent nodes to a Human Review node.", "links": []}]}, {"id": "P8", "label": "Uncertainty", "title": "Treat model uncertainty as a first-class engineering concern.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 5", "text": "Many AI models produce outputs with inherent uncertainty, but the nature of the uncertainty varies by approach and can be difficult to characterize precisely. Classical models produce confidence scores that, when properly calibrated, provide a quantitative basis for trusting or questioning the result. Generative models present a different challenge: they produce fluent, plausible outputs that can obscure factual errors or knowledge gaps. This asymmetry, where incorrect outputs look indistinguishable from correct ones, makes engineering for uncertainty more important and more difficult. A model that confidently cites nonexistent sources or generates plausible but fabricated statistics illustrates why traditional error-handling assumptions break down. Uncertainty calibration, or confidence calibration (ensuring that a system’s expressed confidence corresponds to its probability of being correct), remains a challenging problem. Gaps in both reliability and robustness contribute to this challenge. AI systems can behave unpredictably when encountering inputs outside the conditions they were trained on. Implement technical methods to quantify and detect low-confidence outputs, and design mechanisms to communicate uncertainty to upstream processes and human users that support good decision making. Approaches to model uncertainty span confidence scoring, consistency checks across multiple generations, retrieval-augmented grounding, and pre-generation risk assessment. Which technique to use depends on the application and the stakes. Equally important is how uncertainty is communicated. Explicit, calibrated expressions of uncertainty compared to overconfident claims have shown improved user decision quality. Engineering decisions involve specifying how uncertainty is surfaced using mechanisms such as confidence indicators, qualitative statements, and confidence-triggered escalation and review. For high-stakes circumstances, design systems to present a range of candidate outputs along with their confidence thresholds, return the decision to a human decision maker, or decline to respond when confidence thresholds are not met.", "root": "How is uncertainty detected, calibrated and communicated?", "nodes": [{"ph": "the nature of the uncertainty varies by approach", "t": "B", "q": "Classical model (confidence scores) or generative model (fluent but possibly wrong)?", "s": "The approach chosen in P4 sets the Uncertainty Handler defaults.", "links": [{"to": "P4", "k": "tie"}]}, {"ph": "Uncertainty calibration", "t": "Q", "q": "Does expressed confidence match actual accuracy?", "s": "A Stage 4 calibration check in the eval plan.", "links": []}, {"ph": "inputs outside the conditions they were trained on", "t": "Q", "q": "How are out-of-distribution inputs detected?", "s": "An OOD detector option on the Uncertainty Handler.", "links": []}, {"ph": "confidence scoring, consistency checks across multiple generations, retrieval-augmented grounding, and pre-generation risk assessment", "t": "B", "q": "Which technique or techniques?", "s": "A method selector on the Uncertainty Handler node.", "links": []}, {"ph": "Which technique to use depends on the application and the stakes", "t": "R", "q": "Choose by application and stakes.", "s": "Defaults change with the stakes level set in P7.", "links": [{"to": "P7", "k": "tie"}]}, {"ph": "confidence indicators, qualitative statements, and confidence-triggered escalation and review", "t": "B", "q": "How is uncertainty shown to users and upstream processes?", "s": "A UX output setting on the handler.", "links": []}, {"ph": "present a range of candidate outputs along with their confidence thresholds, return the decision to a human decision maker, or decline to respond", "t": "B", "q": "High stakes: show candidates, hand off to a human, or decline?", "s": "A Stage 5 high-stakes policy linked to the escalation path (P7).", "links": [{"to": "P7", "k": "tie"}]}]}, {"id": "P9", "label": "Modularity", "title": "Architect AI systems for modularity and operational resilience.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 5", "text": "AI systems accumulate hidden dependencies that differ from those in traditional software and are often harder to detect. Components that share data sources, consume each other’s output, or rely on the same upstream features can become entangled so that changing one element silently affects behavior elsewhere in the system. This risk intensifies with compound architectures that integrate foundation models, retrieval systems, guardrails, orchestration logic, and business rules. Each integration point is a dependency surface where model updates, API changes, or distribution shifts can propagate unpredictability. To manage this risk, decompose systems into loosely coupled modules with explicit contracts. Define the inputs and outputs for each component, route communication through standardized interfaces, and isolate model selection so that substitution, version updates, and routing decisions can be made independently. Operational resilience depends on observability beyond traditional application monitoring. Best practices include tracking model performance over time, detecting data or concept drift, logging predictions with outcomes, and monitoring for safety violations. Infrastructure should make retraining (for traditional machine learning models or fine tuning of foundation models), model replacement, and component updates routine rather than exceptional, with automated detection of when changes are needed, clear promotion and rollback procedures, and reproducible records of component performance. AI systems also accumulate technical debt in novel ways, including entangled data dependencies, undeclared data consumers, and feedback loops that silently shift system behavior.", "root": "Is the architecture decoupled and operationally resilient?", "nodes": [{"ph": "Components that share data sources, consume each other’s output, or rely on the same upstream features", "t": "Q", "q": "Where are the hidden shared dependencies?", "s": "The critique agent highlights nodes that share sources or upstream features.", "links": []}, {"ph": "decompose systems into loosely coupled modules with explicit contracts", "t": "R", "q": "Does every module have explicit input and output contracts?", "s": "Typed I/O schemas on every node and edge.", "links": []}, {"ph": "isolate model selection so that substitution, version updates, and routing decisions can be made independently", "t": "C", "q": "Can the model be swapped without touching anything else?", "s": "A Model Router node template.", "links": []}, {"ph": "tracking model performance over time, detecting data or concept drift, logging predictions with outcomes, and monitoring for safety violations", "t": "C", "q": "Are all four observability items in place?", "s": "Stage 6 monitoring checklist.", "links": [{"to": "P11", "k": "theme"}, {"to": "P3", "k": "theme"}]}, {"ph": "clear promotion and rollback procedures", "t": "Q", "q": "How are changes promoted and rolled back?", "s": "The Stage 6 runbook artifact.", "links": []}, {"ph": "entangled data dependencies, undeclared data consumers, and feedback loops", "t": "Q", "q": "Any of these forms of technical debt present?", "s": "Critique-agent graph lint: cycles, undeclared consumers.", "links": []}]}, {"id": "P10", "label": "Budget for change", "title": "Plan and budget for continuous change across models, infrastructure, and team capabilities.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 5–6", "text": "The lifecycle of an AI system does not end at deployment. Operational costs including continuous monitoring, model retraining, infrastructure scaling, and dependency management can rival or exceed development costs. Third-party dependency management is subject to external deprecation schedules, pricing changes, behavior shifts from model updates, and the need to maintain architectural flexibility for alternative providers. Cumulatively, these dependencies create a sustained cost that organizations must plan for from the outset. For example, when a third-party model provider deprecates an API version or changes pricing, organizations without architectural flexibility face unplanned migration costs and possible loss of capability. Without explicit budgeting and resource allocation, systems can degrade in performance, incur unexpected expenses, or become operationally unsustainable. Current AI systems exist in continuous change. Model performance decays as distributions shift, requiring detection mechanisms and retraining processes that operate as routine production functions. Infrastructure demands grow with usage, and replacing or scaling compute creates recurrent investment cycles. Team skills gaps widen as the field evolves, making continuous upskilling an operational necessity. Managing computational costs at scale (a dedicated discipline for AI cost management sometimes called “FinOps for AI”) helps ensure that inference, training, and infrastructure expenses are monitored and optimized as rigorously as other operational expenses.", "root": "Is there budget and capacity for continuous change after launch?", "nodes": [{"ph": "continuous monitoring, model retraining, infrastructure scaling, and dependency management", "t": "C", "q": "Is each of these post-launch costs budgeted?", "s": "Line items on the Cost Monitor node.", "links": []}, {"ph": "external deprecation schedules, pricing changes, behavior shifts from model updates", "t": "T", "q": "Which external changes would force rework?", "s": "Dependency watch items on model nodes, tied to the P6 version pin.", "links": [{"to": "P6", "k": "tie"}]}, {"ph": "maintain architectural flexibility for alternative providers", "t": "R", "q": "Can you switch providers?", "s": "Links to the P9 Model Router.", "links": [{"to": "P9", "k": "tie"}]}, {"ph": "Without explicit budgeting and resource allocation", "t": "Q", "q": "Is budget allocated explicitly, before build?", "s": "Stage 1 P10 gate check, reconfirmed at every gate.", "links": []}, {"ph": "Team skills gaps widen as the field evolves", "t": "Q", "q": "What is the upskilling plan?", "s": "GOVERN team panel (P2).", "links": [{"to": "P2", "k": "tie"}]}, {"ph": "FinOps for AI", "t": "C", "q": "Are inference, training and infrastructure costs monitored and optimized?", "s": "A Stage 6 cost dashboard in the monitoring spec.", "links": []}]}, {"id": "P11", "label": "Safety", "title": "Apply practical safety engineering across the AI system lifecycle.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 6", "text": "AI systems can cause harm even in the absence of adversarial attack. Systems that produce confidently wrong outputs in high-stakes contexts, that behave unpredictably on novel inputs, or that take autonomous actions with unintended consequences present concrete safety engineering challenges distinct from security concerns (see Practice 5). Engineering teams should apply established safety engineering techniques (e.g., hazard analysis, failure mode identification, safety cases, and operational safeguards) adapted for the unique characteristics of AI components. Identify safety considerations during design, verify them through targeted testing during development, and continuously monitor them in production. Practical safety engineering for AI systems starts with identifying how a system can fail and what harm each failure mode can cause. AI model and systems cards document known limitations and intended operating conditions. Runtime monitoring tracks behavioral indicators (e.g., output confidence distributions, refusal rates, flagged content) to detect when a system operates outside its intended use. NIST’s AI Risk Management Framework provides structured approaches for mapping safety concerns to engineering controls. Ask practical safety-engineering related questions throughout the system lifecycle:40, 41 What failure modes have been identified? What safeguards have been put in place? What has been tested? What should be monitored? Who is accountable when something goes wrong?", "root": "How can the system fail and cause harm, and what controls each failure?", "nodes": [{"ph": "AI systems can cause harm even in the absence of adversarial attack", "t": "R", "q": "Is safety assessed separately from security (P5)?", "s": "Safety and Security are separate checks in the studio.", "links": [{"to": "P5", "k": "text"}]}, {"ph": "confidently wrong outputs in high-stakes contexts, that behave unpredictably on novel inputs, or that take autonomous actions with unintended consequences", "t": "B", "q": "Which hazard classes apply: confidently wrong, unpredictable on novel input, unintended autonomous action?", "s": "Hazard node type options.", "links": [{"to": "P8", "k": "theme"}, {"to": "P7", "k": "theme"}]}, {"ph": "hazard analysis, failure mode identification, safety cases, and operational safeguards", "t": "B", "q": "Which safety techniques will be applied?", "s": "The Stage 1 initial hazard list grows into a safety case.", "links": []}, {"ph": "Identify safety considerations during design, verify them through targeted testing during development, and continuously monitor them in production", "t": "T", "q": "Identify, verify, monitor: in which stages?", "s": "Hazards are created in Stage 1, tested in Stage 4 and monitored in Stage 6, with one Hazard node carrying all three.", "links": []}, {"ph": "AI model and systems cards", "t": "C", "q": "Are limitations and intended operating conditions documented?", "s": "Stage 5 system card.", "links": []}, {"ph": "output confidence distributions, refusal rates, flagged content", "t": "C", "q": "Which behavioral indicators are monitored?", "s": "Stage 6 monitors.", "links": []}, {"ph": "What failure modes have been identified? What safeguards have been put in place? What has been tested? What should be monitored? Who is accountable when something goes wrong?", "t": "Q", "q": "The practice's own five-question decision sequence.", "s": "The closing section of the review packet.", "links": []}]}, {"id": "P12", "label": "Evaluation", "title": "Invest in evaluation as a first-class engineering challenge.", "source": "CMU SEI, AI Engineering: Twelve Foundational Practices (2026), p. 6–7", "text": "Evaluation determines whether an AI system is working. It indicates whether the data is fit for purpose, whether safety constraints are being met, whether the system is performing as expected, and whether the system is degrading in production. With ever-broader adoption of AI and agentic systems, the evaluation surface continues to expand. An agentic system that reliably completes tasks in testing may behave unpredictably in production when users issue ambiguous instructions or when tool APIs return unexpected results. Models and systems that pass pre-deployment evaluation can change behavior after deployment based on distribution shifts, user behavior changes, or dependency updates. Evaluation requires intentional infrastructure investments, including curated evaluation datasets, domain-specific benchmarks, automated pipelines, and human judgement workflows for complex or ambiguous tasks. Evaluation-driven development is an emerging engineering practice where evaluation criteria and test cases are defined before AI systems are built or deployed. These AI tests are often probabilistic and domain-specific, requiring human judgement to define success criteria and interpret results. Continuous evaluation in production is distinct from pre-deployment testing and uses lightweight monitoring that avoids significant latency or costs, detection mechanisms for unanticipated failure modes, and trustworthy alerting mechanisms. A mature evaluation practice allows engineering teams to drive prioritization, resource allocation, and incremental system design decisions.", "root": "How will you know it works, before and after launch?", "nodes": [{"ph": "whether the data is fit for purpose, whether safety constraints are being met, whether the system is performing as expected, and whether the system is degrading in production", "t": "B", "q": "Which of the four evaluation questions does each eval answer?", "s": "Eval plan sections, each tagged to the practice it serves (P3, P11, performance, P9).", "links": [{"to": "P9", "k": "tie"}, {"to": "P11", "k": "tie"}, {"to": "P3", "k": "tie"}]}, {"ph": "when users issue ambiguous instructions or when tool APIs return unexpected results", "t": "Q", "q": "For agents: are ambiguous instructions and unexpected tool responses tested?", "s": "Agentic eval cases auto-suggested from Tool nodes.", "links": []}, {"ph": "curated evaluation datasets, domain-specific benchmarks, automated pipelines, and human judgement workflows", "t": "C", "q": "Which eval infrastructure is needed?", "s": "The eval-plan agent drafts these at Stage 4.", "links": []}, {"ph": "evaluation criteria and test cases are defined before AI systems are built or deployed", "t": "R", "q": "Are criteria defined before building?", "s": "Eval criteria move to Stage 1 (evaluation-driven development).", "links": []}, {"ph": "requiring human judgement to define success criteria and interpret results", "t": "Q", "q": "Who judges success?", "s": "Domain expert sign-off (P2).", "links": [{"to": "P2", "k": "tie"}]}, {"ph": "Continuous evaluation in production is distinct from pre-deployment testing", "t": "T", "q": "What lightweight evals run in production, and what triggers alerts?", "s": "Stage 6 continuous eval and alerting.", "links": []}, {"ph": "drive prioritization, resource allocation, and incremental system design decisions", "t": "R", "q": "Do eval results feed back into planning?", "s": "Eval results reopen Stage 1 and Stage 3 decisions.", "links": []}]}];
+const T={Q:["Gate question","#2563eb"],B:["Branch / options","#b45309"],C:["Criteria","#15803d"],T:["Revisit trigger","#7e22ce"],R:["Rule of thumb","#475569"]};
+const V={};
+function nd(p,n,i){return `<button class="nd b-${n.t}" data-p="${p.id}" data-i="${i}" title="${T[n.t][0]}"><span class="n" style="color:${T[n.t][1]}">${i+1}</span>${esc(n.q)}${(n.links||[]).length?` <span style="font-size:11px;color:var(--color-text-secondary)">&#8594; ${n.links.map(l=>l.to).join(", ")}</span>`:""}</button>`}
+function diagram(p){
+ // Gate questions and revisit triggers form the spine; branches, criteria and rules hang off the step before them.
+ const steps=[{head:null,kids:[]}];
+ p.nodes.forEach((n,i)=>{if(n.t==="Q"||n.t==="T")steps.push({head:[n,i],kids:[]});else steps[steps.length-1].kids.push([n,i]);});
+ let o=`<div class="dg"><div class="rootn">${esc(p.root)}</div>`;
+ if(steps[0].kids.length)o+=`<div class="kids" style="margin-left:16px">${steps[0].kids.map(([n,i])=>nd(p,n,i)).join("")}</div>`;
+ o+=`<div class="spine">`;
+ steps.slice(1).forEach(s=>{const [n,i]=s.head;o+=`<div class="step">${nd(p,n,i)}`;
+  if(s.kids.length)o+=`<div class="kids">${s.kids.map(([k,j])=>nd(p,k,j)).join("")}</div>`;
+  if(n.t==="T")o+=`<div class="loop">&#8634; loops back to the root decision when triggered</div>`;
+  o+=`</div>`});
+ return o+`</div><div class="dkey">Solid line: gate questions and revisit triggers in reading order. Dotted: the options, criteria and rules that inform each step.</div></div>`;}
+const E=[{"a": "P1", "b": "P4", "k": "tie", "n": 1}, {"a": "P1", "b": "P10", "k": "tie", "n": 1}, {"a": "P2", "b": "P10", "k": "tie", "n": 2}, {"a": "P3", "b": "P5", "k": "tie", "n": 1}, {"a": "P3", "b": "P6", "k": "tie", "n": 1}, {"a": "P3", "b": "P12", "k": "tie", "n": 2}, {"a": "P4", "b": "P7", "k": "tie", "n": 1}, {"a": "P4", "b": "P9", "k": "text", "n": 1}, {"a": "P5", "b": "P6", "k": "tie", "n": 1}, {"a": "P5", "b": "P7", "k": "theme", "n": 1}, {"a": "P6", "b": "P12", "k": "theme", "n": 1}, {"a": "P4", "b": "P8", "k": "tie", "n": 1}, {"a": "P7", "b": "P8", "k": "tie", "n": 2}, {"a": "P9", "b": "P11", "k": "theme", "n": 1}, {"a": "P3", "b": "P9", "k": "theme", "n": 1}, {"a": "P6", "b": "P10", "k": "tie", "n": 1}, {"a": "P9", "b": "P10", "k": "tie", "n": 1}, {"a": "P5", "b": "P11", "k": "text", "n": 1}, {"a": "P8", "b": "P11", "k": "theme", "n": 1}, {"a": "P7", "b": "P11", "k": "theme", "n": 1}, {"a": "P9", "b": "P12", "k": "tie", "n": 1}, {"a": "P11", "b": "P12", "k": "tie", "n": 1}, {"a": "P2", "b": "P12", "k": "tie", "n": 1}];
+const KL={text:"Stated in SEI text",tie:"From studio tie-in",theme:"Shared theme"};
+const pos=id=>{const k=+id.slice(1)-1,a=(k/12)*2*Math.PI-Math.PI/2;return [175*Math.cos(a),175*Math.sin(a)]};
+let mh=null;
+function drawMap(){const act=mh||(fp!=="all"?fp:null);let s="";
+ E.forEach(e=>{const [x1,y1]=pos(e.a),[x2,y2]=pos(e.b);const on=!act||e.a===act||e.b===act;
+  s+=`<path d="M${x1},${y1} Q0,0 ${x2},${y2}" stroke="${e.k==="theme"?"#6b7280":"var(--color-text)"}" stroke-width="${e.k==="text"?3:1.2+e.n*.5}" stroke-dasharray="${e.k==="tie"?"6 4":e.k==="theme"?"2 4":""}" class="${on?"":"fade"}"><title>${e.a} and ${e.b}: ${KL[e.k]}</title></path>`});
+ D.forEach(p=>{const [x,y]=pos(p.id),[lx,ly]=[x*1.0,y*1.0];const deg=E.filter(e=>e.a===p.id||e.b===p.id).length;
+  s+=`<g class="pn${act===p.id?" on":""}" data-m="${p.id}" tabindex="0" role="button" aria-label="${p.id} ${p.label}, ${deg} links"><circle cx="${lx}" cy="${ly}" r="${15+deg}"></circle><text x="${lx}" y="${ly+4}" text-anchor="middle">${p.id}</text></g>`;
+  const [tx,ty]=[x*1.17,y*1.17];s+=`<text x="${tx}" y="${ty+4}" text-anchor="${Math.abs(tx)<20?"middle":tx>0?"start":"end"}" style="font-size:11px;fill:var(--color-text-secondary)">${p.label}</text>`});
+ msvg.innerHTML=s;
+ if(act){const L=E.filter(e=>e.a===act||e.b===act);mapsel.innerHTML=`<p style="margin:10px 0 0"><b>${act} ${D.find(p=>p.id===act).label}</b> links to ${L.length} practices:</p><ul>${L.map(e=>{const o=e.a===act?e.b:e.a;return `<li>${o} ${D.find(p=>p.id===o).label} <span class="muted">(${KL[e.k]})</span></li>`}).join("")}</ul>`}else mapsel.innerHTML="";}
+function lks(n){return (n.links||[]).map(l=>`<button class="lk ${l.k}" data-go="${l.to}" title="${KL[l.k]}"><i></i>${l.to} ${D.find(p=>p.id===l.to).label}</button>`).join("")}
+let fp="all",ft="all",pinned=null;
+const esc=s=>s.replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function mark(p){let t=p.text,spans=p.nodes.map((n,i)=>({i,a:t.indexOf(n.ph),b:t.indexOf(n.ph)+n.ph.length})).sort((x,y)=>x.a-y.a);
+ let o="",c=0;spans.forEach(s=>{if(s.a<c)return;o+=esc(t.slice(c,s.a));const n=p.nodes[s.i];
+ o+=`<span class="pill t-${n.t}${ft==="all"||ft===n.t?" keep":""}" data-p="${p.id}" data-i="${s.i}" tabindex="0">${esc(n.ph)}<sup>${s.i+1}</sup></span>`;c=s.b});return o+esc(t.slice(c));}
+function render(){
+ pnav.innerHTML=`<button aria-pressed="${fp==="all"}" data-fp="all">All 12</button>`+D.map(p=>`<button aria-pressed="${fp===p.id}" data-fp="${p.id}">${p.id} ${p.label}</button>`).join("");
+ tnav.innerHTML=`<button aria-pressed="${ft==="all"}" data-ft="all">All node types</button>`+Object.entries(T).map(([k,v])=>`<button aria-pressed="${ft===k}" data-ft="${k}">${v[0]}</button>`).join("");
+ leg.innerHTML=Object.entries(T).map(([k,v])=>`<span><i class="sw t-${k}" style="border:2px solid ${v[1]}"></i>${v[0]}</span>`).join("");
+ main.innerHTML=D.filter(p=>fp==="all"||fp===p.id).map(p=>`<section class="p" id="s-${p.id}"><div class="pid">Practice ${p.id.slice(1)} · ${p.nodes.length} decision nodes</div>
+ <h2>${esc(p.title)}</h2><p class="root"><b>Root decision:</b> ${esc(p.root)}</p>
+ <div class="txt${ft==="all"?"":" dim"}">${mark(p)}</div><p class="src">Source: ${esc(p.source)}, CC BY-NC 4.0</p>
+ <div class="vt"><button data-v="${p.id}:d" aria-pressed="${(V[p.id]||"d")==="d"}">Diagram</button><button data-v="${p.id}:l" aria-pressed="${V[p.id]==="l"}">List</button></div>
+ ${(V[p.id]||"d")==="d"?diagram(p):`<ol class="tree">${p.nodes.map((n,i)=>`<li data-p="${p.id}" data-i="${i}"><span class="tg t-${n.t}">${T[n.t][0]}</span>${esc(n.q)}</li>`).join("")}</ol>`}</section>`).join("");
+ drawMap();
+ if(pinned){const e=document.querySelector(`.pill[data-p="${pinned[0]}"][data-i="${pinned[1]}"]`);e&&e.classList.add("on")}
+}
+function body(pid,i){const p=D.find(x=>x.id===pid),n=p.nodes[i];return {p,n,h:`<div class="k" style="color:${T[n.t][1]}">${pid} · node ${i+1} · ${T[n.t][0]}</div><div class="q">${esc(n.q)}</div><div class="s"><b>Studio tie-in:</b> ${esc(n.s)}</div>${(n.links||[]).length?`<div style="margin-top:6px"><span class="muted" style="font-size:11px">Links to</span><br>${lks(n)}</div>`:""}`}}
+document.addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){fp=g.dataset.go;mh=null;render();document.getElementById("s-"+fp)?.scrollIntoView({block:"start",behavior:"smooth"});return}const m=e.target.closest("[data-m]");if(m){fp=fp===m.dataset.m?"all":m.dataset.m;mh=null;render();return}const b=e.target.closest("button");if(b&&b.dataset.v){const [k,v]=b.dataset.v.split(":");V[k]=v;render();return}if(b&&b.dataset.fp){fp=b.dataset.fp;render();return}if(b&&b.dataset.ft){ft=b.dataset.ft;render();return}
+ const x=e.target.closest(".pill,.tree li,.nd");if(x){if(ft!=="all"&&x.classList.contains("pill")&&!x.classList.contains("keep"))return;pinned=[x.dataset.p,+x.dataset.i];const {h}=body(...pinned);
+ pin.innerHTML=`<h3>Pinned node</h3>${h}<div class="muted" style="margin-top:8px">“${esc(D.find(p=>p.id===pinned[0]).nodes[pinned[1]].ph)}”</div>`;
+ document.querySelectorAll(".pill.on").forEach(z=>z.classList.remove("on"));const pe=document.querySelector(`.pill[data-p="${pinned[0]}"][data-i="${pinned[1]}"]`);if(pe){pe.classList.add("on");if(!x.classList.contains("pill"))pe.scrollIntoView({block:"center",behavior:"smooth"})}}});
+document.addEventListener("mouseover",e=>{const m=e.target.closest("[data-m]");const nm=m?m.dataset.m:null;if(nm!==mh&&(m||e.target.closest("#msvg")===null)){mh=nm;drawMap()}const x=e.target.closest(".pill,.nd");if(!x||(x.classList.contains("pill")&&ft!=="all"&&!x.classList.contains("keep"))){tip.style.display="none";return}tip.innerHTML=body(x.dataset.p,+x.dataset.i).h;tip.style.display="block"});
+document.addEventListener("mousemove",e=>{if(tip.style.display!=="block")return;const w=tip.offsetWidth,h=tip.offsetHeight;tip.style.left=Math.min(e.clientX+14,innerWidth-w-8)+"px";tip.style.top=(e.clientY+h+24>innerHeight?e.clientY-h-12:e.clientY+16)+"px"});
+document.addEventListener("focusin",e=>{const x=e.target.closest(".pill");if(!x)return;const r=x.getBoundingClientRect();tip.innerHTML=body(x.dataset.p,+x.dataset.i).h;tip.style.display="block";tip.style.left=Math.min(r.left,innerWidth-350)+"px";tip.style.top=(r.bottom+6)+"px"});
+document.addEventListener("focusout",()=>tip.style.display="none");
+document.addEventListener("keydown",e=>{if(e.key==="Enter"&&e.target.classList.contains("pill"))e.target.click()});
+render();
+</script></body></html>
