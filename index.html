@@ -1,9 +1,140 @@
 <!doctype html>
 <html lang="en">
-<meta charset="utf-8">
-<title>AI Engineering Practices and Risk Management Framework</title>
-<h1>AI Engineering Practices and Risk Management Framework</h1>
-<ul>
-  <li><a href="./AI%20Lifecycle%20Wheel.html">AI Lifecycle Wheel</a></li>
-  <li><a href="./SEI%20practice%20decision%20nodes.html">SEI Practice Decision Nodes</a></li>
-</ul>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Engineering Practices and Risk Management Framework</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #211b35;
+      background: #f9f8fc;
+      --accent: #4200db;
+      --border: #e3deee;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      height: 100dvh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    header {
+      background: linear-gradient(120deg, #fff 25%, #f0eaff);
+      border-bottom: 1px solid var(--border);
+      padding: clamp(16px, 3vw, 32px) clamp(14px, 4vw, 56px) 14px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: clamp(1.25rem, 3vw, 2rem);
+      line-height: 1.15;
+      letter-spacing: -.025em;
+    }
+
+    .views {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    button {
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: #fff;
+      color: inherit;
+      padding: 9px 14px;
+      font: inherit;
+      font-size: .875rem;
+      font-weight: 600;
+      cursor: pointer;
+    }
+
+    button:hover { border-color: var(--accent); }
+
+    button[aria-pressed="true"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    button:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+    }
+
+    main {
+      flex: 1;
+      min-height: 0;
+      display: grid;
+      padding: clamp(8px, 2vw, 20px);
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 0;
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      background: #fff;
+    }
+
+    [hidden] { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>AI Engineering Practices and Risk Management Framework</h1>
+    <div class="views" role="group" aria-label="Framework views">
+      <button type="button" aria-controls="wheel" aria-pressed="true">
+        AI Lifecycle Wheel
+      </button>
+      <button type="button" aria-controls="nodes" aria-pressed="false">
+        SEI Practice Decision Nodes
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <iframe
+      id="wheel"
+      title="AI Lifecycle Wheel"
+      src="./AI%20Lifecycle%20Wheel.html">
+    </iframe>
+    <iframe
+      id="nodes"
+      title="SEI Practice Decision Nodes"
+      data-src="./SEI%20practice%20decision%20nodes.html"
+      hidden>
+    </iframe>
+  </main>
+
+  <script>
+    const buttons = document.querySelectorAll('.views button');
+
+    buttons.forEach(button => {
+      button.addEventListener('click', () => {
+        buttons.forEach(option => {
+          const selected = option === button;
+          const frame = document.getElementById(
+            option.getAttribute('aria-controls')
+          );
+
+          option.setAttribute('aria-pressed', String(selected));
+          frame.hidden = !selected;
+
+          if (selected && frame.dataset.src) {
+            frame.src = frame.dataset.src;
+            delete frame.dataset.src;
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
